@@ -2,7 +2,7 @@
     <div class="flex-container">
         <Header></Header>
         <CategorySlider></CategorySlider>
-        <h1>App Component</h1>
+        <MainPage></MainPage>
          <div class="btn-group" role="group" aria-label="Basic mixed styles example">
 </div>
     </div>
@@ -10,11 +10,13 @@
 <script>
 import Header from './Components/Header';
 import CategorySlider from './Components/CategorySlider';
+import MainPage from './Components/MainPage'
 export default {
     name:'App',
     components:{
         Header,
-        CategorySlider
+        CategorySlider,
+        MainPage
         }
 }
 </script>

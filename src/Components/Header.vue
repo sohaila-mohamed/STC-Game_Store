@@ -45,11 +45,6 @@
  
 
 </div>
-     
-
-  
- 
-
 </nav>
     </div>
 </template>

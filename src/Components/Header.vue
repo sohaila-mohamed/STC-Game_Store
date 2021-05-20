@@ -1,6 +1,6 @@
 <template>
     <div>
-<nav class="navbar navbar-light bg-light">
+<nav class="navbar navbar-light ">
 
   <div class="container-fluid">
 
@@ -12,10 +12,10 @@
       class="Logo" >
     </a>
      <form  class="d-flex">
-      <input v-show="SearchFlag" class="form-control me-1" type="search" placeholder="Search" aria-label="Search">
-    </form>
 
-    <img v-show="!SearchFlag" src="../assets/Icons/search/Star.png"
+      <input v-show="SearchFlag" class="form-control me-1" type="search" placeholder="Search" aria-label="Search">
+
+        <img v-show="!SearchFlag" src="../assets/Icons/search/Star.png"
 
      srcset="../assets/Icons/search/Star@2x.png 2x,
 
@@ -23,15 +23,21 @@
 
      class="Icons-Search" v-on:click="openSearch">
 
+
     <img v-show="SearchFlag"  
     src='../assets/Icons/close/close.png' 
     class="Icons-Search"
     v-on:click="closeSearch">
+
+
     <img 
       src="../assets/Icons/star/Star.png"
       srcset="../assets/Icons/star/Star@2x.png 2x,
              ../assets/Icons/star/Star@3x.png 3x"
       class="Icons-Star">
+    </form>
+
+  
   </div>
 
 </nav>
@@ -82,7 +88,7 @@ export default {
 
   height: 21px;
 
-  margin: 0 0 0 5px;
+  margin: 10px 0px 0px 5px;
 
 
 }

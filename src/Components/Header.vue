@@ -1,5 +1,6 @@
 <template>
-    <div>
+    <div class="row m-0 p-0">
+      
 <nav class="navbar navbar-light ">
 
   <div class="container-fluid">
@@ -64,7 +65,7 @@ export default {
 
   width: 300px;
 
-  height: 100px;
+  height: 70px;
 
   margin: 0 400px 0 0;
 

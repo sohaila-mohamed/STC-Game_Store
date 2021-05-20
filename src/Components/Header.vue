@@ -1,21 +1,25 @@
 <template>
     <div class="row m-0 p-0">
-      
 <nav class="navbar navbar-light ">
 
   <div class="container-fluid">
-
-   <a class="navbar-brand" href="#">
+  
+   <a class="navbar-brand col-3 offset-lg-2 offset-md-2 offset-sm-0 " href="#">
       <img  
       src="./../assets/Logo/Logo_4.png"
       srcset="./../assets/Logo/Logo_4@2x.png 2x,
              ./../assets/Logo/Logo_4@3x.png 3x"
       class="Logo" >
     </a>
-     <form  class="d-flex">
 
-      <input v-show="SearchFlag" class="form-control me-1" type="search" placeholder="Search" aria-label="Search">
+     <form  class="col-lg-3 col-md-3 " :class="[SearchFlag?'col-sm-9 col-9':'col-2']">
+     
+       <input v-show="SearchFlag" class="form-control " type="search" placeholder="Search" aria-label="Search">
 
+    </form>
+
+    <div class="col-lg-3 col-md-3 col-sm-2 col-2">
+      
         <img v-show="!SearchFlag" src="../assets/Icons/search/Star.png"
 
      srcset="../assets/Icons/search/Star@2x.png 2x,
@@ -27,7 +31,7 @@
 
     <img v-show="SearchFlag"  
     src='../assets/Icons/close/close.png' 
-    class="Icons-Search"
+    class="Icons-Search col-lg-2"
     v-on:click="closeSearch">
 
 
@@ -35,11 +39,16 @@
       src="../assets/Icons/star/Star.png"
       srcset="../assets/Icons/star/Star@2x.png 2x,
              ../assets/Icons/star/Star@3x.png 3x"
-      class="Icons-Star">
-    </form>
+      class="Icons-Star col-lg-2">
+
+    </div>
+ 
+
+</div>
+     
 
   
-  </div>
+ 
 
 </nav>
     </div>
@@ -65,9 +74,7 @@ export default {
 
   width: 300px;
 
-  height: 70px;
-
-  margin: 0 400px 0 0;
+  height: 80px;
 
   object-fit: contain;
 
@@ -79,7 +86,7 @@ export default {
 
   height: 21px;
 
-  margin: 10px 0px 0px 5px;
+  margin: 0px 0px 0px 5px;
 
 }
 
@@ -89,8 +96,9 @@ export default {
 
   height: 21px;
 
-  margin: 10px 0px 0px 5px;
+  margin: 0px 0px 0px 5px;
 
 
 }
+
 </style>

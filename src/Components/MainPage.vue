@@ -1,7 +1,7 @@
 <template>
 <div class="MainPage">
-    <div class="row" v-if="!loading && data && data.length">
-        <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2 col-sm-12 offset-sm-0 col-12 offset-0">
+    <div class="row pt-4" v-if="!loading && data && data.length">
+        <div class="col-lg-8 offset-lg-2 col-md-8 offset-md-2 col-sm-12 offset-sm-0 col-12 offset-0">
             <FeaturedGame :featuredGame="featuredGame"> </FeaturedGame>
         </div>
     </div>

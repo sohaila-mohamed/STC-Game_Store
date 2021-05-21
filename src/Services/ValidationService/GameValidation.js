@@ -14,11 +14,11 @@ const schema = Joi.object({
     category: Joi.string().min(3).max(100).required(),
     rate: Joi.number().min(0).required(),
     featured: Joi.boolean().required(),
-    images: Joi.array().items(Joi.object({
+    images: Joi.object({
         img1: Joi.string().required(),
         img2: Joi.string(),
         img3: Joi.string(),
-    })).required(),
+    }).required(),
     classifier: Joi.array().items(Joi.string().valid("most popular", "recommended"))
 
 })

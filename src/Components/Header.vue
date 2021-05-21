@@ -1,5 +1,5 @@
 <template>
-    <div class="row m-0 p-0">
+    <div class="row m-0 p-0 Header">
 <nav class="navbar navbar-light ">
 
   <div class="container-fluid">
@@ -65,6 +65,9 @@ export default {
 </script>
 
 <style scoped>
+.Header{
+  background-color: white;
+}
 .Logo {
 
   width: 300px;

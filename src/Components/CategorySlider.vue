@@ -1,7 +1,7 @@
 <template>
   <div class="row m-0 p-0">
     <div  class="horizontal-scroll-wrapper mt-2">
-      <CategoryItem  v-for="(cat,index) in categories" :key="index" v-bind:categoryTitle="cat"></CategoryItem>
+      <CategoryItem v-on:OnCategorySelection="OnCategorySelection" v-on:OnCategoryDeSelection="OnCategoryDeSelection" v-for="(cat,index) in categories" :key="index" v-bind:categoryTitle="cat"></CategoryItem>
     </div>
   </div>
 </template>
@@ -17,7 +17,17 @@ export default {
       categories:["Sports","Advanture","Action","Arcade",
       "Sports","Advanture","Action","Arcade","Sports","Advanture",
       "Action","Arcade"]
-  }}
+  }},
+  methods:{
+    OnCategorySelection(data){
+      this.$emit("OnGategoryFilteration",data);
+      console.log(data);
+    },
+    OnCategoryDeSelection(data){
+      this.$emit("OnGategoryDeFilteration",data);
+        console.log(data);
+    }
+  }
 };
 </script>
 <style scoped>

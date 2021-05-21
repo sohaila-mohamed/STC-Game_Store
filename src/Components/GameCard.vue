@@ -5,7 +5,7 @@
              ${game.images.img3} 3x`" class="card-img-top " alt="...">
   <div class="card-body">
     <p class="Text card-title Card-Text">{{game.title.toLocaleUpperCase()}}: {{game.description.substring(0,10).toLocaleLowerCase()+'...'}}</p>
-    <ReadMoreButton class="w-100"></ReadMoreButton>
+    <ReadMoreButton text="More Info" class="w-100"></ReadMoreButton>
     <div class="Rating-Item ">
       <img src="../assets/Icons/Rating/ratingIcon.svg">
       <span class="Text Rating-Text">{{game.rate}}</span>

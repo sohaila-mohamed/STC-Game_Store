@@ -28,13 +28,16 @@ export default {
         choose(){
             if(!this.clicked){
             this.backgroundColor="#572589";
-            this.textColor="#ffffff",
+            this.textColor="#ffffff";
             this.clicked=true;
+            this.$emit('OnCategorySelection',this.categoryTitle);
             return;
             }
             this.backgroundColor="#ffffff";
             this.textColor="#545454",
             this.clicked=false;
+            
+             this.$emit('OnCategoryDeSelection',this.categoryTitle);
         }
     }
 }

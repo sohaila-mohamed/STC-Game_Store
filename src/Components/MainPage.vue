@@ -1,4 +1,6 @@
 <template>
+<div>
+  <CategorySlider v-on:OnGategoryFilteration="Filter" v-on:OnGategoryDeFilteration="DeFilter"></CategorySlider>
 <div class="MainPage">
     <div class="row pt-4 m-0" v-if="!loading && data && data.length">
         <div class="col-lg-8 offset-lg-2 col-md-8 offset-md-2 col-sm-12 offset-sm-0 col-12 offset-0">
@@ -21,18 +23,29 @@
   </p>
   <p v-if="error">Error Happened</p>
 </div>
+</div>
 </template>
+
+
+
+
 <script>
 import FeaturedGame from './FeaturedGame';
 import GameList from './GameList'
 import axios from 'axios';
+import CategorySlider from './CategorySlider'
 import {ValidateGameObject} from '../Services/ValidationService/GameValidation'
 import { onMounted,ref} from "vue";
 export default {
     name:"MainPage",
     components:{
         FeaturedGame,
-        GameList
+        GameList,
+        CategorySlider
+    },
+    data(){return{
+       filterationCategories:[]
+    }
     },
      setup() { 
     const data = ref(null);
@@ -74,6 +87,25 @@ export default {
     
    
         
+   },
+   methods:{
+     Filter(category){
+       if(!category) return;
+       this.filterationCategories.push(category);
+       this.recommendedGames=this.data.filter(game=>this.filterationCategories.includes(game.category)&&game.classifier.includes("recommended"));
+       this.popularGames=this.data.filter(game=>this.filterationCategories.includes(game.category)&&game.classifier.includes("most popular"));
+     },
+     DeFilter(category){
+         this.filterationCategories=this.filterationCategories.filter(cat=>cat!==category);
+         console.log(...this.filterationCategories);
+         if(!this.filterationCategories.length) {
+           this.recommendedGames=this.data.filter(item=>item.classifier.includes("recommended"));
+           this.popularGames=this.data.filter(item=>item.classifier.includes("most popular"));
+           return;
+         }
+         this.recommendedGames=this.data.filter(game=>this.filterationCategories.includes(game.category));
+         this.popularGames=this.data.filter(game=>this.filterationCategories.includes(game.category));
+     }
    }
 }
 </script>

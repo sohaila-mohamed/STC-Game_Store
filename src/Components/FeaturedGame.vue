@@ -13,7 +13,7 @@
         <h5 class="card-title Text Desc-Text  Desc-Title">{{featuredGame.title}}</h5>
         <p class="card-text Text  Desc-p" > {{featuredGame.description.substring(0,100)+" ..."}}</p>
         <p class="card-text Text Desc-Text "><small class="text-muted">Last updated 3 mins ago</small></p>
-        <ReadMoreButton class="w-100"></ReadMoreButton>
+        <ReadMoreButton text="More Info" class="w-100"></ReadMoreButton>
       </div>
     </div>
   </div>

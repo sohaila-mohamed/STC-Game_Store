@@ -11,7 +11,7 @@
     <div class="col-lg-4 col-md-4 col-sm-4 col-12  Description">
       <div class="card-body">
         <h5 class="card-title Text Desc-Text  Desc-Title">{{featuredGame.title}}</h5>
-        <p class="card-text Text  Desc-p" > {{featuredGame.description}}</p>
+        <p class="card-text Text  Desc-p" > {{featuredGame.description.substring(0,100)+" ..."}}</p>
         <p class="card-text Text Desc-Text "><small class="text-muted">Last updated 3 mins ago</small></p>
         <ReadMoreButton class="w-100"></ReadMoreButton>
       </div>

@@ -1,10 +1,10 @@
 <template>
-    <div class="card" >
+    <div class="card m-md-2 m-lg-0 mb-lg-1 m-sm-2 m-2" >
   <img :src="game.images.img1"
             :srcset="`${game.images.img2} 2x,
              ${game.images.img3} 3x`" class="card-img-top " alt="...">
   <div class="card-body">
-    <h5 class="card-title Card-Text">Card title</h5>
+    <p class="Text card-title Card-Text">{{game.title.toLocaleUpperCase()}}: {{game.description.substring(0,10).toLocaleLowerCase()+'...'}}</p>
     <ReadMoreButton class="w-100"></ReadMoreButton>
     <div class="Rating-Item ">
       <img src="../assets/Icons/Rating/ratingIcon.svg">
@@ -34,23 +34,11 @@ export default {
 
 
 .Card-Text{
-  font-family: Tajawal;
-
-  font-size: 14.4px;
-
-  font-weight: normal;
-
-  font-stretch: normal;
-
-  font-style: normal;
-
-  line-height: 1.32;
-
-  letter-spacing: normal;
-
-  text-align: left;
 
   color: #444242;
+  height: 50px;
+  overflow: hidden;
+  font-size: 12px;
 }
 .Rating-Item{
   position: absolute;

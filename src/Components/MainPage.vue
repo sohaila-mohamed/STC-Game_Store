@@ -24,7 +24,7 @@
 </template>
 <script>
 import FeaturedGame from './FeaturedGame';
-import GameList from './RecommendationList'
+import GameList from './GameList'
 import axios from 'axios';
 import {ValidateGameObject} from '../Services/ValidationService/GameValidation'
 import { onMounted,ref} from "vue";

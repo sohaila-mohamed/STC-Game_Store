@@ -13,7 +13,6 @@
         <h5 class="card-title Desc-Text Desc-Title">{{featuredGame.title}}</h5>
         <p class="card-text Desc-Text  Desc-p" > {{featuredGame.description}}</p>
         <p class="card-text Desc-Text "><small class="text-muted">Last updated 3 mins ago</small></p>
-
         <ReadMoreButton></ReadMoreButton>
       </div>
     </div>

@@ -10,10 +10,10 @@
     </div>
     <div class="col-lg-4 col-md-4 col-sm-4 col-12  Description">
       <div class="card-body">
-        <h5 class="card-title Desc-Text Desc-Title">{{featuredGame.title}}</h5>
-        <p class="card-text Desc-Text  Desc-p" > {{featuredGame.description}}</p>
-        <p class="card-text Desc-Text "><small class="text-muted">Last updated 3 mins ago</small></p>
-        <ReadMoreButton></ReadMoreButton>
+        <h5 class="card-title Text Desc-Text  Desc-Title">{{featuredGame.title}}</h5>
+        <p class="card-text Text  Desc-p" > {{featuredGame.description}}</p>
+        <p class="card-text Text Desc-Text "><small class="text-muted">Last updated 3 mins ago</small></p>
+        <ReadMoreButton class="w-100"></ReadMoreButton>
       </div>
     </div>
   </div>
@@ -53,20 +53,9 @@ export default {
 
 } 
 .Desc-Text{
-  font-family: Tajawal;
 
   font-size: 10px;
-  font-stretch: normal;
-
-  font-style: normal;
-
-  line-height: 1.36;
-
-  letter-spacing: normal;
-
   text-align: left;
-
-  color: #444242;
 
 }
 .Description{

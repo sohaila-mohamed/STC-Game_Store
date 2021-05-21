@@ -7,7 +7,11 @@
             </div>
 
             <div class="p-3">
-              <RecommendationList :RecommendationList="recommendedGames"></RecommendationList>
+              <GameList :gameList="recommendedGames" title="Most Recommended"></GameList>
+            </div>
+
+             <div class="p-3">
+              <GameList :gameList="popularGames" title="Most Popular"></GameList>
             </div>
             
         </div>
@@ -20,7 +24,7 @@
 </template>
 <script>
 import FeaturedGame from './FeaturedGame';
-import RecommendationList from './RecommendationList'
+import GameList from './RecommendationList'
 import axios from 'axios';
 import {ValidateGameObject} from '../Services/ValidationService/GameValidation'
 import { onMounted,ref} from "vue";
@@ -28,7 +32,7 @@ export default {
     name:"MainPage",
     components:{
         FeaturedGame,
-        RecommendationList
+        GameList
     },
      setup() { 
     const data = ref(null);

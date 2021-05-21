@@ -2,10 +2,10 @@
     <div class="card" >
   <img :src="game.images.img1"
             :srcset="`${game.images.img2} 2x,
-             ${game.images.img3} 3x`" class="card-img-top Img" alt="...">
+             ${game.images.img3} 3x`" class="card-img-top " alt="...">
   <div class="card-body">
     <h5 class="card-title Card-Text">Card title</h5>
-    <ReadMoreButton></ReadMoreButton>
+    <ReadMoreButton class="w-100"></ReadMoreButton>
   </div>
 </div>
 </template>
@@ -28,11 +28,7 @@ export default {
 
 <style scoped>
 
-.Img {
-  width: 150px;
-  min-height:150px ;
 
-} 
 .Card-Text{
   font-family: Tajawal;
 
@@ -52,6 +48,7 @@ export default {
 
   color: #444242;
 }
+
 
 @media screen and (max-width: 1000px) {
   .Card-Text {

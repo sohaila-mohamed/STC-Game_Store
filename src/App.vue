@@ -23,3 +23,26 @@ export default {
 
 
 
+<style>
+.Text{
+  font-family: Tajawal;
+
+  font-size: 14px;
+  font-stretch: normal;
+
+  font-style: normal;
+
+  line-height: 1.36;
+
+  letter-spacing: normal;
+
+  color: #444242;
+
+}
+@media screen and (max-width: 1000px) {
+  .Text {
+    font-size: 12px;
+  }
+  
+}
+</style>

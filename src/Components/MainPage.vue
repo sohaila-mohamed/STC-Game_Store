@@ -1,13 +1,17 @@
 <template>
 <div class="MainPage">
-    <div class="row pt-4" v-if="!loading && data && data.length">
+    <div class="row pt-4 m-0" v-if="!loading && data && data.length">
         <div class="col-lg-8 offset-lg-2 col-md-8 offset-md-2 col-sm-12 offset-sm-0 col-12 offset-0">
             <div class="p-3">
               <FeaturedGame :featuredGame="featuredGame"> </FeaturedGame>
             </div>
 
             <div class="p-3">
-              
+              <GameList :gameList="recommendedGames" title="Most Recommended"></GameList>
+            </div>
+
+             <div class="p-3">
+              <GameList :gameList="popularGames" title="Most Popular"></GameList>
             </div>
             
         </div>
@@ -20,13 +24,15 @@
 </template>
 <script>
 import FeaturedGame from './FeaturedGame';
+import GameList from './GameList'
 import axios from 'axios';
 import {ValidateGameObject} from '../Services/ValidationService/GameValidation'
 import { onMounted,ref} from "vue";
 export default {
     name:"MainPage",
     components:{
-        FeaturedGame
+        FeaturedGame,
+        GameList
     },
      setup() { 
     const data = ref(null);

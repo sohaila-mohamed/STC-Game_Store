@@ -33,33 +33,41 @@
     src='../assets/Icons/close/close.png' 
     class="Icons-Search col-lg-2"
     v-on:click="closeSearch">
-
+    
 
     <img 
       src="../assets/Icons/star/Star.png"
       srcset="../assets/Icons/star/Star@2x.png 2x,
              ../assets/Icons/star/Star@3x.png 3x"
-      class="Icons-Star col-lg-2">
+      class="Icons-Star col-lg-2 " v-on:click="toggleLoginForm">
 
     </div>
- 
-
+     <LoginForm v-if="LoginFormFlag"></LoginForm>
+  
 </div>
 </nav>
+
     </div>
 </template>
 
 <script>
+import LoginForm from './LoginForm';
 export default {
     name:'Header',
     data(){
         return{
-            SearchFlag:false
+            SearchFlag:false,
+            LoginFormFlag:false
         }
     },
     methods:{
         closeSearch(){this.SearchFlag=false;},
-        openSearch(){this.SearchFlag=true;}
+        openSearch(){this.SearchFlag=true;},
+        submitLogin(){this.LoginFormFlag=false;},
+        toggleLoginForm(){if(this.LoginFormFlag)this.LoginFormFlag=false;else this.LoginFormFlag=true;}
+    },
+    components:{
+      LoginForm
     }
 }
 </script>

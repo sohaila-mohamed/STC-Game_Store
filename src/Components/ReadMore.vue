@@ -1,10 +1,16 @@
 <template>
-    <button type="button" class="btn  Btn Btn-Text">More Info</button>
+    <button type="button" class="btn  Btn Btn-Text">{{text}}</button>
 </template>
 
 <script>
 export default {
-    name:"ReadMoreButton"
+    name:"ReadMoreButton",
+    props:{
+        text:{
+            type:String,
+            required:true
+        }
+    }
 }
 </script>
 

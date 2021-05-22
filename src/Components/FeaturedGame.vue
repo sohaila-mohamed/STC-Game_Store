@@ -13,7 +13,9 @@
         <h5 class="card-title Text Desc-Text  Desc-Title">{{featuredGame.title}}</h5>
         <p class="card-text Text  Desc-p" > {{featuredGame.description.substring(0,100)+" ..."}}</p>
         <p class="card-text Text Desc-Text "><small class="text-muted">Last updated 3 mins ago</small></p>
+        <router-Link :to="{ name: 'Details',params:{gameId:featuredGame.id}}">
         <ReadMoreButton text="More Info" class="w-100"></ReadMoreButton>
+        </router-Link>
       </div>
     </div>
   </div>

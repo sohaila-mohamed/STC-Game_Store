@@ -68,9 +68,6 @@ display: inline;
   font-size: 12px;
   font-weight: bold;
 }
-.Text-SeeAll{
-    
-     font-size: 12px;
-}
+
 }
 </style>

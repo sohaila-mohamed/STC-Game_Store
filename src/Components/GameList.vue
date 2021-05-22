@@ -12,7 +12,10 @@
 
   <div class="row g-0 p-0 justify-content-evenly">
      <div v-for="(recom,i) in gameList.slice(0,5)" :key="i"  class="col-lg-2 col-md-3 col-sm-4 col-6">
-         <GameCard :game="recom"></GameCard>
+<router-Link :to="{ name: 'Details',params:{gameId:recom.id}}">
+        <GameCard :game="recom"></GameCard>
+        </router-Link>
+      
      </div>
 
      

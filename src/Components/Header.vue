@@ -4,13 +4,13 @@
 
   <div class="container-fluid">
   
-   <a class="navbar-brand col-3 offset-lg-2 offset-md-2 offset-sm-0 " href="#">
+   <router-link  :to="{ name: 'Home'}" class="navbar-brand col-3 offset-lg-2 offset-md-2 offset-sm-0 " href="#">
       <img  
       src="./../assets/Logo/Logo_4.png"
       srcset="./../assets/Logo/Logo_4@2x.png 2x,
              ./../assets/Logo/Logo_4@3x.png 3x"
       class="Logo" >
-    </a>
+    </router-link >
 
      <form  class="col-lg-3 col-md-3 " :class="[SearchFlag?'col-sm-9 col-9':'col-2']">
      

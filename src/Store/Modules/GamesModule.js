@@ -25,7 +25,7 @@ const GamesModule = {
             console.log("state recommended game", state.recommendedGames);
         },
         setPopularGames(state) {
-            state.popularGames = state.data.filter(item => item.classifier.includes("most popular"));
+            state.popularGames = state.data.filter(item => item.classifier.includes("popular"));
         },
         updateRecommendationList(state, recommendedGames) {
             console.log("update", recommendedGames);

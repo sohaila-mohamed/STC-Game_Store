@@ -10,7 +10,7 @@
             <div class="card-body text-start">
               <h5 class="Text Text-Title card-title">{{game.title}}</h5>
               <p class="Text Text-SubTitle ">{{game.description}}</p>
-              <p><small class="text-muted Text-Downloads">300K Downloads</small></p>
+              <p><small class="text-muted Text-Downloads">{{game.downloads}} Downloads</small></p>
               <pre class="Text card-text Details">DASH as fast as you can!
 DODGE the oncoming trains!
 
@@ -46,7 +46,7 @@ By Kiloo and Sybo.</pre>
 
 <script>
 import { mapGetters } from "vuex";
-import GameList from './GameList'
+import GameList from '../Components/GameList'
 export default {
   name: "DetailsPage",
   computed: {

@@ -28,9 +28,9 @@
 
 
 <script>
-import FeaturedGame from './FeaturedGame';
-import GameList from './GameList'
-import CategorySlider from './CategorySlider'
+import FeaturedGame from '../Components/FeaturedGame';
+import GameList from '../Components/GameList'
+import CategorySlider from '../Components/CategorySlider'
 import {mapGetters} from 'vuex';
 export default {
     name:"MainPage",
@@ -56,7 +56,7 @@ export default {
        if(!category) return;
        this.filterationCategories.push(category);
        let recommendedGames=this.$store.state.Games.data.filter(game=>this.filterationCategories.includes(game.category)&&game.classifier.includes("recommended"));
-       let popularGames=this.$store.state.Games.data.filter(game=>this.filterationCategories.includes(game.category)&&game.classifier.includes("most popular"));
+       let popularGames=this.$store.state.Games.data.filter(game=>this.filterationCategories.includes(game.category)&&game.classifier.includes("popular"));
       await this.$store.dispatch('Games/ApplyFilter',{
          recommendations:recommendedGames,
          popular:popularGames
@@ -70,12 +70,12 @@ export default {
          console.log(...this.filterationCategories);
          if(!this.filterationCategories.length) {
            recommendedGames=this.$store.state.Games.data.filter(item=>item.classifier.includes("recommended"));
-           popularGames=this.$store.state.Games.data.filter(item=>item.classifier.includes("most popular"));
+           popularGames=this.$store.state.Games.data.filter(item=>item.classifier.includes("popular"));
             
          }
          else{
-           recommendedGames=this.$store.state.Games.data.filter(game=>this.filterationCategories.includes(game.category));
-           popularGames=this.$store.state.Games.data.filter(game=>this.filterationCategories.includes(game.category));
+           recommendedGames=this.$store.state.Games.data.filter(game=>this.filterationCategories.includes(game.category)&&game.classifier.includes("recommended"));
+           popularGames=this.$store.state.Games.data.filter(game=>this.filterationCategories.includes(game.category)&&game.classifier.includes("popular"));
          }
          await this.$store.dispatch('Games/ApplyFilter',{
          recommendations:recommendedGames,

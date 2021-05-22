@@ -49,11 +49,7 @@ export default {
          getFeaturedGame:'Games/getFeaturedGame',
          getPopularGames:'Games/getPopularGames'
 
-      }),
-      get(){
-        console.log(this.$store.state.Games.data);
-        return [];
-      }
+      })
     },
    methods:{
     async Filter(category){

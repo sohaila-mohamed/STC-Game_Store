@@ -7,7 +7,7 @@ const routes = [{
         component: MainPage,
     },
     {
-        path: "/details/:gameId", // <-- notice the colon
+        path: "/details/:gameId",
         name: "Details",
         component: DetailsPage,
     },
